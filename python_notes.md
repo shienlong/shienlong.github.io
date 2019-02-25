@@ -27,3 +27,16 @@ You can also pass a list of items as a value:
     r = requests.get('https://httpbin.org/get', params=payload)
     print(r.url)
     https://httpbin.org/get?key1=value1&key2=value2&key2=value3
+
+
+# Pandas
+## to_csv
+Below *with open* method opens a `.csv` file with `'a'` to append data to file. Opening the `.csv` file the dataframe will be organized based on its delimiter. This means no need to delimit the file. However somehow it introduces empty rows after each data row.
+
+_with open_ method will automatically 'close'.
+
+    with open('test.csv', 'a') as f:' 
+        df3.to_csv(f, header=False, index=False)` 
+
+Below implementation of `to_csv` will create a file with default separator "," between attributes and looks very close to CSV format. 
+`df3.to_csv('test1', header=False, index=False)` 
