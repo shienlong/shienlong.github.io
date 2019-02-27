@@ -4,6 +4,29 @@
 - __[Yong's Python notebook](https://yongks.github.io/python_book/)__ - Yong's notebook on Python
 - __[github markdown guide](https://guides.github.com/features/mastering-markdown/)__ - Guide to mastering markdown
 
+# Installation
+## Pylauncher
+- __[Pylauncher doc](https://www.python.org/dev/peps/pep-0397/)__
+- __[Pylauncher download](https://bitbucket.org/vinay.sajip/pylauncher)__
+- __[Simpler Explanation of Pylauncher](https://blog.python.org/2011/07/python-launcher-for-windows_11.html)__
+
+The launcher allows Python scripts (.py and .pyw files) on Windows to specify the version of Python which should be used, allowing simultaneous use of Python 2 and 3.
+
+Windows CMD, key in `py -2 xy123.py` to run python code using version 2.7. Key in `py -3 xy123.py` to run with version 3.7
+
+## Pip 
+Key in below in Win CMD to add pip path to environment variables.
+    
+    setx PATH "%PATH%;C:\python37\Scripts"
+
+Upgrade pip using:
+    
+    py -3 -m pip install --upgrade pip
+    
+Without downloading package, install from internet:
+    
+    py -3 -m pip install requests
+
 # Requests
 ## Passing parameters in URL
 - __[Requests - Passing parameters in URL](http://docs.python-requests.org/en/master/user/quickstart/#passing-parameters-in-urls)__ 
