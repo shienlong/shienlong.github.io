@@ -53,6 +53,9 @@ You can also pass a list of items as a value:
 
 
 # Pandas
+## Dataframe summaries
+__Data Types__: `df.dtypes`
+
 ## to_csv
 Below *with open* method opens a `.csv` file with `'a'` to append data to file. Opening the `.csv` file the dataframe will be organized based on its delimiter. This means no need to delimit the file. However somehow it introduces empty rows after each data row.
 
@@ -63,3 +66,25 @@ _with open_ method will automatically 'close'.
 
 Below implementation of `to_csv` will create a file with default separator "," between attributes and looks very close to CSV format. 
 `df3.to_csv('test1', header=False, index=False)` 
+
+# Time and Date 
+## UTC 
+Using `import datetime` package:
+
+    today = dt.datetime.utcnow()
+    df3['UpdateDate'] = today
+    
+Using `import pandas as pd` package:
+
+    today = pd.Timestamp.utcnow()
+    df3['UpdateDate'] = today
+    
+# Python Data Formatting
+## Rename Single Column
+Example below:
+
+    df3.rename(columns={'Last Price': 'LastPrice'}, inplace=True)
+    df3.rename(columns={'% Change': 'ChgPct'}, inplace=True)
+
+## Change Column Data Type
+    df3['ChgPct'] = df3['ChgPct'].astype(float)
