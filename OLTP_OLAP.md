@@ -35,3 +35,25 @@ In OLTP database there is detailed and current data, and schema used to store tr
   |Space Requirements|Can be relatively small if historical data is archived|Larger due to the existence of aggregation structures and history data; requires more indexes than OLTP|
   |Database Design|Highly normalized with many tables|Typically de-normalized with fewer tables; use of star and/or snowflake schemas|
   |Backup and Recovery|Backup religiously; operational data is critical to run the business, data loss is likely to entail significant monetary loss and legal liability|Instead of regular backups, some environments may consider simply reloading the OLTP data as a recovery method|
+
+# Relational Database
+__[What are relational DB](https://computer.howstuffworks.com/question599.htm)__
++ 1970, E.F. Codd
++ Originally, databases were flat:
+  - Info stored in 1 long txt file, called **tab delimited file**
+  - Ea entry separated by special character, ie: '|'
+  - Makes it difficult to search for info
++ Easily search for specific info
++ Allows sort based on field
++ Generate records that contain only certain fields from each record
++ Uses **tables** to store info
++ Columns - "Fields", Rows - "Records"
++ Quickly compare information because of the arrangement of data in columns
+
+The relational database model takes advantage of this uniformity to build completely new tables out of required information from existing tables. In other words, it uses the relationship of similar data to increase the speed and versatility of the database.
+
+The "relational" part of the name comes into play because of mathmatical relations. A typical relational database has anywhere from 10 to more than 1,000 tables. Each table contains a column or columns that other tables can key on to gather information from that table.
+
+By storing this information in another table, the database can create a single small table with the locations that can then be used for a variety of purposes by other tables in the database. A typical large database, like the one a big Web site, such as Amazon would have, will contain hundreds or thousands of tables like this all used together to quickly find the exact information needed at any given time.
+
+Relational databases are created using a special computer language, structured query language (SQL), that is the standard for database interoperability. SQL is the foundation for all of the popular database applications available today, from Access to Oracle.
