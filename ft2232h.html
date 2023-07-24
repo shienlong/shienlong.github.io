@@ -11,30 +11,34 @@
 <hr>
 <h2>USING FT2232H AS SYNCHRONOUS DIGITAL OUTPUT</h2>
 <p>
-I was looking for a solution that could generate digital outputs meeting below conditions:
+  I was looking for a solution that could generate digital outputs meeting below conditions:
 </p>
 <ul>
-  <li>Pins that are synchronous.</li>
-  <li>At least 4 IO pins.</li>
-  <li>USB.</li>
-  <li>Have Python wrappers or packages.</li>
+  <li>Pins that are synchronous</li>
+  <li>At least 4 IO pins</li>
+  <li>Built in USB</li>
+  <li>Have Python wrappers or packages</li>
 </ul>
 <p>
-In between each paragraph, just use those p tags.
-I like writing one sentence per line here.
-But it will all just come out as one paragraph.
+  Having a USB connection from the computer to the board would be convenient.
+  USB cables are relatively easy and cheap to buy. 
+  Also having a built in USB protocol makes it so much easier to work with.
 <p>
-You get used to writing inbetween the tags, and just ignoring them.
-It's so much easier than using a collection of other tools to make HTML.
-Just write inside an HTML file directly! 
-So much simpler.
+  I do not need a powerful board or solution. 
+  Therefore, there is no need for dedicated IDE which would increase my cost considerably. 
+  Something with free drivers and DLLs that has a Python wrapper would help alot. 
 <p>
-You can <a href="nextpage.html">link to other pages like this</a>.
+  A minimum of 4 IO pins for what I need. 
+  Of course, more is better.
 <p>
-Or insert an image like this:
-<img src="https://sive.rs/images/kids-raft.jpg">
+  The IO pins has to be synchronous. 
+  It means that the bit stream coming out of each pin is in sync. 
+  Similar to protocols like JTAG, SPI or I2C...there is a clock pin and having a clock pin means other pins are sync'ed to the clock pin. 
+  My application is a custom protocol, therefore will not be able to use JTAG, SPI or I2C, but would need synchronous outputs to work. 
 <p>
-That's it!
+  Speed is not a big issue at the moment. If it is, then will come back and update this paragraph.
+<p>
+  The FT2232H has 2 channels
 </p>
 <h3>DIGITAL OUTPUT WITH MPSSE</h3>
 <pre>var foo = "bar";
