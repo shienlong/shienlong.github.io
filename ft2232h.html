@@ -38,7 +38,11 @@
 <p>
   Speed is not a big issue at the moment. If it is, then will come back and update this paragraph.
 <p>
-  The FT2232H has 2 channels
+  The FT2232H from FTDI has 2 channels (Port A and Port B). 
+  There are 8 pins available on each port while in synchronous mode.
+  The MPSSE (Multi-Protocol Synchronous Serial Engine) as the name suggest, is able to handle multiple synchronous protocols such as (JTAG, SPI, I2C and bitbang mode).
+  FTDI provides the <a href="https://ftdichip.com/drivers/d2xx-drivers/">driver</a> software and <a href="https://ftdichip.com/wp-content/uploads/2022/05/AN_396-FTDI-Drivers-Installation-Guide-for-Windows-10_11.pdf">
+    install guides</a>.   
 </p>
 <h3>DIGITAL OUTPUT WITH MPSSE</h3>
 <pre>var foo = "bar";
