@@ -44,6 +44,18 @@
   FTDI provides the <a href="https://ftdichip.com/drivers/d2xx-drivers/">driver</a> software and <a href="https://ftdichip.com/wp-content/uploads/2022/05/AN_396-FTDI-Drivers-Installation-Guide-for-Windows-10_11.pdf">
     install guides</a>.   
 </p>
+<h3>HARDWARE/DONGLE WITH FT2232H</h3>
+  <p>
+    <a href="https://www.dlpdesign.com/usb/2232h.php">DLP-2232H</a> from DLP Design.
+  <p>
+    Add a jumper or short pin 19 and 20 to enable the dongle to power up using USB supplied power. 
+    This will route power from PORTVCC to EXTVCC which supplies to VCCUSB.
+    There are other power up methods. 
+    I have not tried out the other methods, so will not discuss it here. 
+  <p>
+    The header pins on the DLP-2232H dongle looks small but they are spaced 2.50mm apart. 
+    I have placed it on breadboards and general purpose IDC sockets and it works well. 
+  </p>
 <h3>DIGITAL OUTPUT WITH MPSSE</h3>
 <pre>var foo = "bar";
 var hello = "world";
