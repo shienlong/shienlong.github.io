@@ -40,6 +40,7 @@
 <p>
   The FT2232H from FTDI has 2 channels (Port A and Port B). 
   There are 8 pins available on each port while in synchronous mode.
+  It has a max clock of 30MHz, although I am not sure if I can get that speed on the hardware (DLP-2232H) I am using.
   The MPSSE (Multi-Protocol Synchronous Serial Engine) as the name suggest, is able to handle multiple synchronous protocols such as (JTAG, SPI, I2C and bitbang mode).
   FTDI provides the <a href="https://ftdichip.com/drivers/d2xx-drivers/">driver</a> software and <a href="https://ftdichip.com/wp-content/uploads/2022/05/AN_396-FTDI-Drivers-Installation-Guide-for-Windows-10_11.pdf">
     install guides</a>.   
@@ -58,8 +59,13 @@
   </p>
 <h3>INSTALLING D2XX DRIVER</h3>
   <p>
+    Before installing the driver, open Device Manager on Windows, look at Ports (COM & LPT), observe how many COM ports are available.
     Do not connect the hardware dongle yet. Install the <a href="https://ftdichip.com/drivers/d2xx-drivers/">driver</a> first. 
-    After install, connect the hardware/dongle, then it should load the "ftd2xx.dll". 
+    After install, connect the hardware/dongle, then it should load the "ftd2xx.dll" file.
+	You can check the Device Manager again, and observe any new or additional COM port. 
+	Then in Device Manager, look at Universal Serial Bus Controllers, you should see an additional USB Serial Converter.
+	That would indicate a successful installation.
+	"ftd2xx.dll" file should be located in path "C:\Windows\system32".
   </p>
 </body>
 </html>
