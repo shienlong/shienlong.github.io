@@ -31,7 +31,7 @@ To show the FTDI device connected to your computer:
     from pyftdi.ftdi import ftdi
     from io import StringIO
 	
-	out = StringIO()
+    out = StringIO()
     print(Ftdi.show_devices('ftdi:///?', out=out))</pre>
 </p>
 <h3>SYNCHRONOUS BIT BANG</h3>
@@ -45,7 +45,7 @@ MPSSE Controller example:
 	
     ioOut = GpioMpsseController()
     ioOut.configure (url=url, direction=0xFFFF, frequency=3E6)
-	ioOut.write(out=[1,4,6,1,13,15])
+    ioOut.write(out=[1,4,6,1,13,15])
     ioOut.close()</pre>
 <p>
 Synchronous GPIO example:
@@ -53,8 +53,8 @@ Synchronous GPIO example:
     from pyftdi.gpio import GpioSyncController
 	
     ioOut = GpioSyncController()
-	ioOut.configure(url=url, direction=0xFFFF, frequency=3E6)
-	ioOut.exchange(out=[1,4,6,1,13,15])</pre>
+    ioOut.configure(url=url, direction=0xFFFF, frequency=3E6)
+    ioOut.exchange(out=[1,4,6,1,13,15])</pre>
 </p>
 <h3>DIGITAL OUTPUT WITH SYNCHRONOUS BITBANG</h3>
 </p>
