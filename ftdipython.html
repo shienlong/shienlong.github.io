@@ -27,8 +27,10 @@ The FTDI device will have a specific hardware identifier.
 I only have 1 device, there did not have any issues. 
 <p>
 To show the FTDI device connected to your computer:
-  <pre>from pyftdi.ftdi import ftdi
+  <pre>
+    from pyftdi.ftdi import ftdi
     from io import StringIO
+	
 	out = StringIO()
     print(Ftdi.show_devices('ftdi:///?', out=out))</pre>
 </p>
