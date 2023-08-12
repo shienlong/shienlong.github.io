@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LEVEL SHIFTER | SHIENLONG</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1><a href="index.html">SHIENLONG</a></h1>
+<hr>
+<h2>LEVEL SHIFTER - TXB0108</h2>
+<p>
+I have a 3.3V digital output coming from the <a href="ft2232h.html">DLP-2232H</a> and at the other end, the device either accepts 1.2V or 1.8V but not 3.3V.
+The <a href="https://www.ti.com/lit/ds/symlink/txb0108.pdf">TXB0108</a> level shifter accepts a wide range of voltages and is bidirectional, meaning it can take a 3.3V signal and translate it to a lower voltage or the other way around depending on your application. 
+<p>
+It has 8-bits or 8 channels for your voltage translation. I only needed 4 but the additional pins are there should I need them for later expansion. 
+There is a OE (Output Enable) pin which is supplied by VCCA, meaning if you want the outputs turned on, set it to VCCA, otherwise just drive it low. 
+<p>
+The VCCA and VCCB pins require a 0.1uF ceramic bypass capacitors. It is a pretty straightforward setup. 
+A 50kOhm resistor is required if pull-up/pull-down is required. 
+<p>
+I tested it with a cheap sample from Shopee. Once I have determined it is working with my application on the breadboard, I purchased the parts from <a href="https://element14.com/">Element14</a>. 
+<p>
+I had drawn a schematic and layout using KiCAD. 
+The available part package from Element14 was a WSON package type.
+I had never hand soldered this package type before. 
+However, it was not too difficult. 
+It is possible to solder it using 1mm solder and 1mm bend conical tip. 
+However, maybe a smaller, less than 1mm sized tip and solder wire would have worked better. 
+I had several boards to solder, the headgun method worked as well.
+</p>
+</body>
+</html>
