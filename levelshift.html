@@ -28,7 +28,24 @@ I had never hand soldered this package type before.
 However, it was not too difficult. 
 It is possible to solder it using 1mm solder and 1mm bend conical tip. 
 However, maybe a smaller, less than 1mm sized tip and solder wire would have worked better. 
-I had several boards to solder, the headgun method worked as well.
+I had several boards to solder, the heatgun method worked as well.
+<p>
+Update 26/08/2023 - 
+One of the boards soldered using the heatgun method had a problematic pin. I had to touch up with solder every time there is an issue.
+I suspect the problem to be the materials and methods I used.
+I did not have fresh solder paste, so instead I added solder to the pads along with some flux.
+Then placed the level shifter on the pads and used the heatgun to melt the solder. 
+<p>
+Another board soldered using 1mm solder tip did not have such issue. 
+I might try again on a spare board if I have fresh solder paste. 
+<p>
+Another update is related to the VCCB voltage. 
+Previously I tested a situation where VCCB is equal to VCCA and was still able to run my application. 
+However, my application ran into issues after a few days of testing. 
+My tests run for several hours, so it was quite a surprise that a new issue surfaced.
+<p>
+The level shifter seems to be drawing current from another supply. 
+This issue disappeared once I increased the VCCB supply (relative to VCCA).
 </p>
 </body>
 </html>
