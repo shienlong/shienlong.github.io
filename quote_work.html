@@ -40,5 +40,34 @@ They who work selfishly for results are miserable."
 <p>
 - Bhagavad Gita
 </p>
+ <form id="newsletterForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="button" onclick="subscribe()">Subscribe</button>
+    </form>
+
+    <script>
+        var emailList = []; // JavaScript array to store email addresses
+
+        function subscribe() {
+            var email = document.getElementById('email').value;
+
+            if (email.trim() !== '') {
+                emailList.push(email); // Add email to the array
+                alert('Thank you for subscribing!');
+
+                // Optionally, you can log the emails to the console
+                console.log(emailList);
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+Please note that the JavaScript array approach is suitable for small-scale applications, but for a more robust and secure solution, especially if you anticipate a large number of subscribers, using a database is recommended. Also, the JavaScript array approach won't persist across page reloads or if the user leaves the page. If you need persistence, you might consider using browser storage options like localStorage or sessionStorage.
+
 </body>
 </html>
