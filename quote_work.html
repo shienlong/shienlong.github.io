@@ -39,29 +39,6 @@ They who work selfishly for results are miserable."
 <p>
 - Bhagavad Gita
 </p>
- <form id="newsletterForm">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <button type="button" onclick="subscribe()">Subscribe</button>
-    </form>
-
-    <script>
-        var emailList = []; // JavaScript array to store email addresses
-
-        function subscribe() {
-            var email = document.getElementById('email').value;
-
-            if (email.trim() !== '') {
-                emailList.push(email); // Add email to the array
-                alert('Thank you for subscribing!');
-
-                // Optionally, you can log the emails to the console
-                console.log(emailList);
-            } else {
-                alert('Please enter a valid email address.');
-            }
-        }
-    </script>
 
 </body>
 </html>
