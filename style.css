@@ -11,3 +11,7 @@ h1, h2, h3 {
   font-family: sans-serif;
   font-weight: normal;
 }
+span.block-bots 
+{ 
+display: none; 
+}
