@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FOLLOWING YOUR TMS BITS WITH JTAG STATEMACHINE | SHIENLONG</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1><a href="index.html">SHIEN LONG</a></h1>
+<hr>
+<h2>FOLLOWING YOUR TMS BITS WITH JTAG STATEMACHINE</h2>
+<p>
+When debugging hardware, we sometimes have to check if the correct control signals are sent. In the case of JTAG, I had to determine if the correct register address and configuration bits was sent. 
+
+I can see the digital signals on oscilloscope. I know which pins I am probing but how do I know what is happening. 
+
+There are 4 pins that I usually probe. TMS, TCK, TDI and TDO. TMS is the pin that sets the statemachine. TDI is where you send the data bits. TCK is the clock to sync every pin. TDO is the output from your target device to the debugger you are using. 
+<p>For contact, kindly send an email to limshienlong@gmail.com. <span class="block-bots" aria-hidden="true">GO AWAY SPAM BOTS!</span></p>
+</body>
+</html>
