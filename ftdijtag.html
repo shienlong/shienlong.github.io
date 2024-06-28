@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JTAG USING FT2232H</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1><a href="index.html">SHIENLONG</a></h1>
+<hr>
+<h2>JTAG USING FT2232H</h2>
+<p>
+I have recently encountered a limitation of using synchronous bit-bang as a method to push JTAG patterns to FT2232H. 
+
+The new patterns were much bigger. thankfully the pyftdi library had the necessary functions to help solve this issue. I am not too familiar with JTAG protocols, so had to do more trial and error with the JTAG functions to do what I needed it to do. 
+
+I was controlling the FT2232H dongle via a LabVIEW program that calls a Python script. The new method was much faster than the bit-bang method. 
+</p>
+</body>
+</html>
